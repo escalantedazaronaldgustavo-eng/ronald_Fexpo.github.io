@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEXPO ITSEC</title>
+    <link rel="icon" href="imagenes/logo_sin_fondo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <img src="imagenes/logo instituto.jpg" alt="Logo" class="logo">
+        <div class="header-text">
+            <h1>Visita a la Feria de Emprendedores</h1>
+            <h2>Proyecto de Investigación de Campo</h2>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#" onclick="mostrarCaratula(); return false;">Carátula</a></li>
+            <li><a href="Stand1.html" target="content_frame" onclick="mostrarIframe()">Stand 1</a></li>
+            <li><a href="Stand2.html" target="content_frame" onclick="mostrarIframe()">Stand 2</a></li>
+            <li><a href="Stand3.html" target="content_frame" onclick="mostrarIframe()">Stand 3</a></li>
+        </ul>
+    </nav>
+
+    
+    <main class="main-content">
+        
+        
+        <div id="seccion-caratula" class="iframe-body page-content" style="border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+            <h1 class="page-title">Datos del Estudiante</h1>
+            <div class="profile-section">
+                <img src="imagenes/foto_perfil.jfif" alt="Fotografía Personal" class="profile-img">
+                <div class="profile-info" style="text-align: left;">
+                    <h2>Ronald Gustavo Escalante Daza</h2>
+                    <p><strong>Carrera:</strong> Sistemas Informaticos</p>
+                    <p><strong>Materia:</strong> Programacion Web</p>
+                    <p><strong>Docente:</strong> Ing. Hugo Alfredo Taborga Paz</p>
+                    <p><strong>Bimestre/Año:</strong> 4to Bimestre 2026</p>
+                    <p class="presentation-text">Como visitante de la feria y mi objetivo es conocer, documentar y entrevistar a los emprendedores locales para analizar sus modelos de negocio y productos.</p>
+                </div>
+            </div>
+        </div>
+
+        <iframe src="" name="content_frame" id="seccion-iframe" class="content-iframe" title="Contenido Principal" style="display: none;"></iframe>
+        
+    </main>
+
+    <footer class="main-footer">
+        <p><strong>Estudiante:</strong> Ronald Gustavo Escalante Daza | <strong>Carrera:</strong> Sistemas Informaticos | <strong>Materia:</strong> Programacion Web | <strong>Año:</strong> 2026</p>
+    </footer>
+
+    <script>
+        function mostrarCaratula() {
+            document.getElementById('seccion-caratula').style.display = 'block';
+            document.getElementById('seccion-iframe').style.display = 'none';
+        }
+
+        function mostrarIframe() {
+            document.getElementById('seccion-caratula').style.display = 'none';
+            document.getElementById('seccion-iframe').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
